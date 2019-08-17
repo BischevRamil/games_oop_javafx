@@ -17,4 +17,15 @@ public enum Cell {
         this.x = x;
         this.y = y;
     }
+
+    public static Cell findByEnum(int x, int y) {
+        Cell rst = Cell.A1;
+        for (Cell cell : Cell.values()) {
+            if (cell.x == x && cell.y == y) {
+                rst = cell;
+                break;
+            }
+        }
+        return rst;
+    }
 }
